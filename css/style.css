@@ -109,13 +109,11 @@ marquee {
 
 .menu__item {
   font-weight: 700;
-  transform: scale(1);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s;
 }
 
 .menu__item:hover {
-  /* transform: scale(1.1); */
-  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .menu__link {
@@ -193,7 +191,6 @@ marquee {
 }
 
 .school__container {
-  display: flex;
   align-items: flex-start;
 }
 
