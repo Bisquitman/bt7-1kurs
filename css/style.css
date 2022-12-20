@@ -199,9 +199,121 @@ marquee {
   height: auto;
 }
 
-.school__content {
+.school__text {
   flex-basis: 50%;
   flex-grow: 1;
+}
+/* --------------------------------- */
+
+/* Hobby slider */
+.hobby-swiper {
+  width: 600px;
+  height: 600px;
+}
+
+.hobby__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hobby__slide img {
+  /* display: block; */
+  /* max-width: 100%; */
+  /* height: auto; */
+  max-height: 600px;
+  object-fit: cover;
+  /* object-position: center; */
+}
+/* --------------------------------- */
+
+/* Pet */
+.pet__subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pet-swiper {
+  width: 100%;
+  padding-top: 0px;
+  padding-bottom: 120px;
+}
+
+.pet__slide {
+  background-position: center;
+  background-size: cover;
+  width: 320px;
+  height: 160px;
+}
+
+.pet__slide img {
+  display: block;
+  width: 100%;
+}
+/* --------------------------------- */
+
+/* Univer */
+.univer__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 222px);
+  grid-auto-flow: dense;
+  gap: 20px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.card {
+  max-width: 252px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 20px 14px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 6%);
+  transition: box-shadow 0.3s;
+}
+.card:hover {
+  box-shadow: 0 14px 30px -15px rgb(0 0 0 / 75%);
+}
+
+.card__picture {
+  width: 155px;
+  height: 92px;
+  padding: 5px 18px 12px;
+  background-image: url('../img/macbook.svg');
+  background-size: cover;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+.card__data {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 23px;
+}
+
+/* .card__client {
+  line-height: 120%;
+}
+
+.card__date {
+  line-height: 140%;
+} */
+
+.card__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
 }
 /* --------------------------------- */
 
@@ -240,24 +352,24 @@ marquee {
 .copyright__item {
   margin-bottom: 5px;
 }
+/* --------------------------------- */
 
-/* Swiper slider */
-.swiper {
-  width: 600px;
-  height: 600px;
+/* Responsive */
+
+@media (max-width: 760px) {
+  .pet-swiper {
+    padding-bottom: 50px;
+  }
 }
 
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (max-width: 600px) {
+  .pet-swiper {
+    padding-bottom: 20px;
+  }
 }
 
-.swiper-slide img {
-  /* display: block; */
-  /* max-width: 100%; */
-  /* height: auto; */
-  max-height: 600px;
-  object-fit: cover;
-  /* object-position: center; */
+@media (max-width: 425) {
+  .pet-swiper {
+    padding-bottom: 0;
+  }
 }

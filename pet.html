@@ -20,7 +20,7 @@
             <img src="./img/av-2348.png" alt="аватар" class="header__logo" />
           </a>
 
-          <marquee behavior="" direction="" hspace="20">
+          <marquee hspace="20">
             Экзаменационная работа студентки первого курса седьмой группы
             первой подгруппы факультета "Технология органических веществ"
             Белорусского государственного технологического университета
@@ -52,7 +52,36 @@
 
     <section class="pet">
       <div class="container">
-        <h1 class="section-title">Питомец</h1>
+        <h1 class="section-title pet__title">Питомец</h1>
+        <div class="pet__subtitle">
+          Все представители нашего питомника имеют ветеринарный паспорт
+          с отметками о прививках и документ с родословной
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper pet-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide pet__slide">
+              <img src="./img/pet/pet-1.jpg" />
+            </div>
+            <div class="swiper-slide pet__slide">
+              <img src="./img/pet/pet-2.jpg" />
+            </div>
+            <div class="swiper-slide pet__slide">
+              <img src="./img/pet/pet-3.jpg" />
+            </div>
+            <div class="swiper-slide pet__slide">
+              <img src="./img/pet/pet-4.jpg" />
+            </div>
+            <div class="swiper-slide pet__slide">
+              <img src="./img/pet/pet-5.jpg" />
+            </div>
+            <div class="swiper-slide pet__slide">
+              <img src="./img/pet/pet-6.jpg" />
+            </div>
+          </div>
+          <div class="swiper-pagination pet__pagination"></div>
+        </div>
       </div>
     </section>
 
@@ -108,5 +137,34 @@
       </div>
     </footer>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- Initialize Swiper -->
+    <script>
+      new Swiper(".pet-swiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 1.5,
+        modifier: 1,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 300,
+          slideShadows: false
+        },
+        breakpoints: {
+          426: {
+            modifier: 2,
+            slidesPerView: 2,
+          },
+        },
+        pagination: {
+          el: ".pet__pagination",
+          clickable: true,
+        }
+      });
+    </script>
   </body>
 </html>
